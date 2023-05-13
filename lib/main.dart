@@ -1,3 +1,4 @@
+import 'package:app_gpt/pages/homePage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,41 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const MyHomePage(title: 'My Chat GPT'),
+      home: const HomePage(title: 'My Chat GPT'),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: const <Widget>[
-            Text(
-              'Bem vindo ao seu Chat GPT',
-            ),
-          ],
-        ),
-      ),
-
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
