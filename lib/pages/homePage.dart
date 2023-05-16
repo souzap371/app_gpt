@@ -27,6 +27,33 @@ class _HomePageState extends State<HomePage> {
               Text(
                 'Bem vindo ao seu Chat GPT',
               ),
+              SizedBox(
+                height: 50,
+              ),
+              TextField(
+                autofocus: true,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  icon: Icon(Icons.person),
+                  hintText: ('Digite o e-mail'),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextField(
+                autofocus: true,
+                obscureText: true,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  icon: Icon(Icons.lock_outline),
+                  hintText: ('Digite a senha'),
+                ),
+              ),
             ],
           ),
         ),
