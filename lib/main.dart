@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const HomePage(title: 'My Chat GPT'),
+      home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
