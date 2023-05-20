@@ -33,9 +33,11 @@ class HomePage extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      // child: Image.asset(
-
-                      // ),
+                      child: Image.asset(
+                        'images/logo.png',
+                        height: 250,
+                        width: 250,
+                      ),
                     ),
                     const AuthForm(),
                   ],
