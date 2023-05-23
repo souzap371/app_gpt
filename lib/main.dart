@@ -1,4 +1,4 @@
-import 'package:app_gpt/pages/homePage.dart';
+import 'package:app_gpt/pages/questionsAnswers.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: const HomePage(),
+      //home: const HomePage(),
+      home: const QuestionsAnswers(),
       debugShowCheckedModeBanner: false,
     );
   }
