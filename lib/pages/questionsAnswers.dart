@@ -1,45 +1,83 @@
 import 'package:flutter/material.dart';
 
-class QuestionsAnswers extends StatefulWidget {
+class QuestionsAnswers extends StatelessWidget {
   const QuestionsAnswers({super.key});
 
-  @override
-  State<QuestionsAnswers> createState() => _QuestionsAnswersState();
-}
-
-class _QuestionsAnswersState extends State<QuestionsAnswers> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Ask me',
-        ),
-        centerTitle: true,
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color(0xff4b0082),
-                Color(0xffac13c5),
-              ],
-            ),
+        backgroundColor: const Color(0xff4b0082),
+        title: const Center(
+          child: Text(
+            'Ask Me',
+            textAlign: TextAlign.center,
           ),
         ),
+
+        // actions: [
+        //   DropdownButtonHideUnderline(
+        //     child: DropdownButton(
+        //       icon: const Icon(
+        //         Icons.more_vert,
+        //         color: Color(0xff4b0082),
+        //       ),
+        //       items: [
+        //         DropdownMenuItem(
+        //           value: 'logout',
+        //           child: Container(
+        //             child: Row(
+        //               children: const [
+        //                 Icon(
+        //                   Icons.exit_to_app,
+        //                   color: Colors.black87,
+        //                 ),
+        //                 SizedBox(width: 10),
+        //                 Text('Sair'),
+        //               ],
+        //             ),
+        //           ),
+        //         ),
+        //       ],
+        //       onChanged: (value) {
+        //         // if (value == 'logout') {
+        //         //   AuthService().logout();
+        //         //}
+        //       },
+        //     ),
+        //   ),
+        //   Stack(
+        //     children: [
+        //       IconButton(
+        //         icon: const Icon(Icons.notifications),
+        //         onPressed: () {},
+        //       ),
+        //       Positioned(
+        //         top: 5,
+        //         right: 5,
+        //         child: CircleAvatar(
+        //           maxRadius: 10,
+        //           backgroundColor: Colors.red.shade800,
+        //           child: const Text(
+        //             'Notificação',
+        //             style: TextStyle(
+        //               fontSize: 12,
+        //             ),
+        //           ),
+        //         ),
+        //       ),
+        //     ],
+        //   ),
+        // ],
       ),
-      body: Stack(
-        children: [
-          Container(
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromARGB(255, 193, 85, 210),
-                  Color.fromARGB(255, 143, 38, 218),
-                ],
-              ),
-            ),
-          ),
-        ],
+      drawer: const Drawer(),
+      body: SafeArea(
+        child: Column(
+          children: const [
+            // Expanded(child: Messages()),
+            // NewMessage(),
+          ],
+        ),
       ),
     );
   }
